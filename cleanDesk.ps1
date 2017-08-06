@@ -9,6 +9,7 @@ $musicFileTypes = "Music", ".mp3", ".wav"
 $torrentFileTypes = "Torrents", ".torrent"
 $setupFileTypes = "Executables", ".exe", ".msi"
 $archiveFileTypes = "Archives", ".zip", ".rar", ".gzip", ".iso"
+$documentsFileTypes = "Documents", ".doc", ".docx", ".ppt", ".pptx", ".txt"
 
 #Create object for pop-ups
 $wshell = New-Object -ComObject Wscript.shell
@@ -136,6 +137,7 @@ CleanByFileTypes $musicFileTypes
 CleanByFileTypes $torrentFileTypes
 CleanByFileTypes $setupFileTypes
 CleanByFileTypes $archiveFileTypes
+CleanByFileTypes $documentsFileTypes
 
 $wshell.Popup("Clean completed", 0, "Done", 0x1)
 
