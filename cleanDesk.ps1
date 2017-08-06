@@ -72,7 +72,7 @@ function CleanByFileTypes($fileTypes)
   ForEach-Object{
     $extension = $_.Extension
 
-    if($fileTypes.Contains($extension))
+    if($fileTypes.Contains($extension.ToLower()))
     {
       $noFiles = 1
     }
@@ -99,7 +99,7 @@ function CleanByFileTypes($fileTypes)
     $extension = $_.Extension
 
 
-    if($fileTypes.Contains($extension))
+    if($fileTypes.Contains($extension.ToLower()))
     {
       echo "Moving file " $_.FullName
       
